@@ -1,0 +1,64 @@
+{
+  "name": "starrycake",
+  "version": "1.0.0",
+  "private": true,
+  "description": "StarryCake is Multiple-Feature-Combined a GitHub Bot Application",
+  "author": "LimeCake <limecake23@gmail.com>",
+  "license": "ISC",
+  "repository": "https://github.com/LIMECAKE/StarryCake.git",
+  "homepage": "https://github.com/LIMECAKE/StarryCake",
+  "bugs": "https://github.com/LIMECAKE/StarryCake/issues",
+  "keywords": [
+    "probot",
+    "github",
+    "probot-app"
+  ],
+  "scripts": {
+    "dev": "nodemon",
+    "start": "probot run ./index.js",
+    "lint": "standard --fix",
+    "test": "jest && standard",
+    "test:watch": "jest --watch --notify --notifyMode=change --coverage"
+  },
+  "dependencies": {
+    "commander": "^5.1.0",
+    "hbs": "^4.1.1",
+    "jsdom": "^16.3.0",
+    "moment": "^2.27.0",
+    "parse-diff": "^0.7.0",
+    "parse-reminder": "^1.2.0",
+    "probot": "^9.5.3",
+    "probot-commands": "^1.1.0",
+    "probot-config": "^1.1.0",
+    "probot-metadata": "^1.0.1",
+    "unfurl.js": "^1.1.6"
+  },
+  "devDependencies": {
+    "chalk": "^4.1.0",
+    "jest": "^24.9.0",
+    "joi": "^14.0.0",
+    "nock": "^12.0.0",
+    "nodemon": "^2.0.0",
+    "probot-scheduler": "^2.0.0-beta.1",
+    "smee-client": "^1.1.0",
+    "standard": "^14.3.1"
+  },
+  "engines": {
+    "node": ">= 8.3.0"
+  },
+  "standard": {
+    "env": [
+      "jest"
+    ]
+  },
+  "nodemonConfig": {
+    "exec": "npm start",
+    "watch": [
+      ".env",
+      "."
+    ]
+  },
+  "jest": {
+    "testEnvironment": "node"
+  }
+}

@@ -1,0 +1,56 @@
+const probotScheduler = require('probot-scheduler')
+const probotCommands = require('probot-commands')
+const assignHandler = require('./lib/assigner/assignHandler')
+const deleteBranch = require('./lib/delete-merged-branch/delete-merged-branch')
+const staleUnmark = require('./lib/stale/unmark')
+const staleMarkAndSweep = require('./lib/stale/mark-and-sweep')
+const todoPullRequestHandler = require('./lib/todo/pull-request-handler')
+const todoPullRequestMergedHandler = require('./lib/todo/pull-request-merged-handler')
+const todoPushHandler = require('./lib/todo/push-handler')
+const todoIssueRenameHandler = require('./lib/todo/issue-rename-handler')
+const todoIgnoreRepos = require('./lib/todo/ignore-repos')
+const reminder = require('./lib/reminder/reminders')
+const respondHandler = require('./lib/responder/respondHandler')
+const triageHandler = require('./lib/triage/triageHandler')
+const triageCheck = require('./lib/triage/check')
+const unfurlHandler = require('./lib/unfurl/unfurlHandler')
+
+module.exports = app => {
+  app.log('StarryCake Loaded')
+
+  const appScheduler = probotScheduler(app, { interval: 30 * 60 * 1000 })
+
+  // ASSIGNER
+  app.on(['issues.opened','pull_request.opened'], assignHandler)
+
+  // DELETE-MERGED-BRANCH
+  app.on('pull_request.closed', deleteBranch)
+
+  // REMINDER
+  probotCommands(app, 'remind', reminder.set)
+  app.on('schedule.repository', reminder.check)
+
+  // STALE
+  app.on(['issue_comment', 'issues', 'pull_request', 'pull_request_review', 'pull_request_review_comment'], async context => {
+    await staleUnmark(context, app, appScheduler)
+  })
+  app.on('schedule.repository', async context => {
+    await staleMarkAndSweep(context, app, appScheduler)
+  })
+
+  // TO-DO
+  app.on(['pull_request.opened', 'pull_request.synchronize'], todoIgnoreRepos(todoPullRequestHandler))
+  app.on('pull_request.closed', todoIgnoreRepos(todoPullRequestMergedHandler))
+  app.on('push', todoIgnoreRepos(todoPushHandler))
+  app.on('issues.edited', todoIgnoreRepos(todoIssueRenameHandler))
+
+  // TRIAGE
+  app.on(['issues.opened','issues.reopened','pull_request.opened','pull_request.reopened'], triageHandler)
+  app.on(['issues.labeled','pull_request.labeled'], triageCheck)
+
+  // RESPOND
+  app.on(['issues.opened','issues.reopened','pull_request.opened','pull_request.reopened'], respondHandler)
+
+  // UNFURL
+  app.on(['issues.opened','issue_comment.created','pull_request.opened'], unfurlHandler)
+}

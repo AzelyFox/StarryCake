@@ -1,0 +1,65 @@
+## MASTER CONFIG
+starrycake:
+  moduleSwitch: true
+
+## ASSIGNER
+assigner:
+  moduleSwitch: true
+  assignOnNewIssue: true
+  assignOnNewPullRequest: true
+  reviewOnNewPullRequest: true
+
+## DELETE-MERGED-BRANCH
+deletebranch:
+  moduleSwitch: true
+  exclude:
+    - dev-*
+  delete_closed_pr: true
+
+## REMINDER
+reminder:
+  moduleSwitch: true
+
+## RESPOND
+responder:
+  moduleSwitch: true
+  respondOnNewIssue: true
+  respondOnNewPullRequest: true
+  respondOnMyIssue: false
+  respondOnMyPullRequest: false
+  issueRespond: Thanks for opening this issue!
+  pullRequestRespond: Thanks for opening this pull request!
+
+## STALE
+stale:
+  moduleSwitch: true
+  daysUntilStale: 60
+  daysUntilClose: 7
+  exemptLabels:
+    - pinned
+    - security
+  staleLabel: wontfix
+  markComment: >
+    This issue has been marked as stale. It will be closed if no further activity occurs.
+  closeComment: false
+
+## TO-DO
+todo:
+  moduleSwitch: true
+  autoAssign: true
+  keyword: ['@todo', 'TODO']
+  bodyKeyword: ['@body', 'BODY']
+  blobLines: 5
+  caseSensitive: false
+  label: true
+  reopenClosed: true
+  exclude: null
+
+## TRIAGE-NEW-ISSUES
+triage:
+  moduleSwitch: true
+  triageLabel: ready
+
+## UNFURL
+unfurl:
+  moduleSwitch: true
