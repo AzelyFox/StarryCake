@@ -1,6 +1,24 @@
 # StarryCake
 
+<p align="center">
+    <img width="240" src="https://user-images.githubusercontent.com/8467374/87795499-195cbb00-c883-11ea-8e63-83138b83df67.png"/>
+</p>
+
+<p align="center">
+    <a href="https://project.devx.kr/starrycake">
+        <img src="https://img.shields.io/badge/DEVX-starrycake-black?style=flat-square" />
+    </a>
+    <a href="#license">
+        <img src="https://img.shields.io/github/license/LIMECAKE/StarryCake?style=flat-square" />
+    </a>
+    <a>
+        <img src="https://img.shields.io/github/v/release/LIMECAKE/StarryCake?style=flat-square" />
+    </a>
+</p>
+
 StarryCake is a Multiple-feature-combined GitHub Bot Application  
+
+## Usage
 [Add this GitHub App to your account!](https://github.com/apps/starrycake)
 
 ## Implemented Features
