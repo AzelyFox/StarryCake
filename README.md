@@ -1,6 +1,29 @@
-# StarryCake
+<h1 align="center">
+  <img src="img/cake_starry.png" alt="StarryCake" width="240">
+  <br>
+  <p>StarryCake</p>
+</h1>
 
+<p align="center">
+    <a href="https://github.com/apps/starrycake">
+        <img src="https://img.shields.io/badge/GITHUB-starrycake-yellow?style=flat-square&logo=github" />
+    </a>
+    <a href="#license">
+        <img src="https://img.shields.io/github/license/LIMECAKE/StarryCake?style=flat-square" />
+    </a>
+    <a href="https://github.com/LIMECAKE/StarryCake/releases">
+        <img src="https://img.shields.io/github/v/release/LIMECAKE/StarryCake?style=flat-square" />
+    </a>
+    <a href="https://github.com/LIMECAKE/StarryCake/issues">
+        <img src="https://img.shields.io/badge/SUPPORT-LIVE-green?style=flat-square" />
+    </a>
+</p>
+
+<p align="center">
 StarryCake is a Multiple-feature-combined GitHub Bot Application  
+</p>
+
+## Usage
 [Add this GitHub App to your account!](https://github.com/apps/starrycake)
 
 ## Implemented Features
@@ -147,6 +170,12 @@ unfurl:
   # if false, UNFURL module won't work
   moduleSwitch: true
 ```
+
+## ScreenShots
+
+<div align="center">
+<img src="img/preview.png" alt="StarryCakePreview" width="80%"></img>
+</div>
 
 ## License
 [ISC](LICENSE) © 2020 LimeCake <limecake23@gmail.com>
