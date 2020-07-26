@@ -16,7 +16,7 @@ const triageCheck = require('./lib/triage/check')
 const unfurlHandler = require('./lib/unfurl/unfurlHandler')
 
 module.exports = app => {
-  app.log('StarryCake Loaded')
+  app.log.warn('StarryCake Loaded')
 
   const appScheduler = probotScheduler(app, { interval: 30 * 60 * 1000 })
 
@@ -53,4 +53,23 @@ module.exports = app => {
 
   // UNFURL
   app.on(['issues.opened','issue_comment.created','pull_request.opened'], unfurlHandler)
+
+  // LOGGING
+  app.on('issues', async (context) => { app.log.warn('issues') })
+  app.on('issues.opened', async (context) => { app.log.warn('issues.opened') })
+  app.on('issues.reopened', async (context) => { app.log.warn('issues.reopened') })
+  app.on('issues.edited', async (context) => { app.log.warn('issues.edited') })
+  app.on('issues.labeled', async (context) => { app.log.warn('issues.labeled') })
+  app.on('issue_comment', async (context) => { app.log.warn('issue_comment') })
+  app.on('issue_comment.created', async (context) => { app.log.warn('issue_comment.created') })
+  app.on('pull_request', async (context) => { app.log.warn('pull_request') })
+  app.on('pull_request.opened', async (context) => { app.log.warn('pull_request.opened') })
+  app.on('pull_request.reopened', async (context) => { app.log.warn('pull_request.reopened') })
+  app.on('pull_request.labeled', async (context) => { app.log.warn('pull_request.labeled') })
+  app.on('pull_request.closed', async (context) => { app.log.warn('pull_request.closed') })
+  app.on('pull_request_review', async (context) => { app.log.warn('pull_request_review') })
+  app.on('pull_request_review_comment', async (context) => { app.log.warn('pull_request_review_comment') })
+  app.on('push', async (context) => { app.log.warn('push') })
+  app.on('schedule.repository', async (context) => { app.log.warn('schedule.repository') })
+
 }

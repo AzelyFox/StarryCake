@@ -1,6 +1,6 @@
 {
   "name": "starrycake",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
   "description": "StarryCake is Multiple-Feature-Combined a GitHub Bot Application",
   "author": "LimeCake <limecake23@gmail.com>",
@@ -27,7 +27,7 @@
     "moment": "^2.27.0",
     "parse-diff": "^0.7.0",
     "parse-reminder": "^1.2.0",
-    "probot": "^9.5.3",
+    "probot": "^9.13.0",
     "probot-commands": "^1.1.0",
     "probot-config": "^1.1.0",
     "probot-metadata": "^1.0.1",

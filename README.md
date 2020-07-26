@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="img/cake_starry.png" alt="StarryCake" width="240">
+  <img src="cake_starry.png" alt="StarryCake" width="240">
   <br>
   <p>StarryCake</p>
 </h1>
@@ -20,7 +20,7 @@
 </p>
 
 <p align="center">
-StarryCake is a Multiple-feature-combined GitHub Bot Application  
+Multiple-feature-combined GitHub Bot Application
 </p>
 
 ## Usage
@@ -65,6 +65,12 @@ Add context to the links shared in discussions
 https://github.com/tunnckoCore/triage-new-issues  
 [Charlike Mike Reagent](https://github.com/tunnckoCore)  
 Adds `triage` label to newly-created issues and then removes it when other label(s) are added
+
+## ChangeLog
+### v1.0.1:200726
+fixed minor bugs
+### v1.0.0:200717
+released
 
 ## Configuration
 create `.github/starrycake.yml` in your repository to make this application work on your order!
@@ -174,7 +180,7 @@ unfurl:
 ## ScreenShots
 
 <div align="center">
-<img src="img/preview.png" alt="StarryCakePreview" width="80%"></img>
+    <img src="preview.png" alt="StarryCakePreview" width="80%"/>
 </div>
 
 ## License
