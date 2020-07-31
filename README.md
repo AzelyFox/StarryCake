@@ -24,7 +24,7 @@ Multiple-feature-combined GitHub Bot Application
 </p>
 
 ## Usage
-[Add this GitHub App to your account!](https://github.com/apps/starrycake)
+[Add this GitHub App to your account!](https://github.com/marketplace/starrycake)
 
 ## Implemented Features
 
