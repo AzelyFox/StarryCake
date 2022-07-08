@@ -24,7 +24,7 @@
     "commander": "^5.1.0",
     "hbs": "^4.1.1",
     "jsdom": "^16.5.0",
-    "moment": "^2.27.0",
+    "moment": "^2.29.4",
     "parse-diff": "^0.7.0",
     "parse-reminder": "^1.2.0",
     "probot": "^9.13.0",
