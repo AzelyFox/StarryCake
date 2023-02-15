@@ -9,12 +9,12 @@
         <img src="https://img.shields.io/badge/GITHUB-starrycake-yellow?style=flat-square&logo=github" />
     </a>
     <a href="#license">
-        <img src="https://img.shields.io/github/license/LIMECAKE/StarryCake?style=flat-square" />
+        <img src="https://img.shields.io/github/license/AzelyFox/StarryCake?style=flat-square" />
     </a>
-    <a href="https://github.com/LIMECAKE/StarryCake/releases">
-        <img src="https://img.shields.io/github/v/release/LIMECAKE/StarryCake?style=flat-square" />
+    <a href="https://github.com/AzelyFox/StarryCake/releases">
+        <img src="https://img.shields.io/github/v/release/AzelyFox/StarryCake?style=flat-square" />
     </a>
-    <a href="https://github.com/LIMECAKE/StarryCake/issues">
+    <a href="https://github.com/AzelyFox/StarryCake/issues">
         <img src="https://img.shields.io/badge/SUPPORT-LIVE-green?style=flat-square" />
     </a>
 </p>
